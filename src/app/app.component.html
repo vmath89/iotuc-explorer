@@ -2,30 +2,6 @@
 
 <md-toolbar color="primary" layout="row" layout-align="center center" class="in-center">
   <span>{{title}}</span>
-  <button class="spacer" md-button (click)="sidenav.toggle()">
-    <md-icon class="md-24">menu</md-icon>
-  </button>
 </md-toolbar>
 
-<md-sidenav-container class="example-container">
-  <md-sidenav #sidenav class="example-sidenav">
-
-    <md-list-item>
-      <a routerLink="/automotive" md-button (click)="sidenav.close()">Automotive</a>
-    </md-list-item>
-
-    <md-list-item>
-      <a routerLink="/finance" md-button (click)="sidenav.close()">Finance</a>
-    </md-list-item>
-
-    <md-list-item>
-      <a routerLink="/tech" md-button (click)="sidenav.close()">Technology</a>
-    </md-list-item>
-  </md-sidenav>
-
-  <div class="example-sidenav-content"></div>
-  <router-outlet></router-outlet>
-</md-sidenav-container>
-
-
-
+<router-outlet></router-outlet>

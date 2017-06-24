@@ -5,20 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {
   MdButtonModule, MdTabsModule, MdMenuModule, MdToolbarModule, MdSidenavModule,
-  MdIconModule, MdListModule
+  MdIconModule, MdListModule, MdGridListModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { AutomotiveComponent } from './components/automotive/automotive/automotive.component';
-import { FinanceComponent } from './components/finance/finance/finance.component';
-import { TechnologyComponent } from './components/technology/technology/technology.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UseCasesComponent } from './components/use-cases/use-cases.component';
+import { UseCasesDetailsComponent } from './components/use-cases-details/use-cases-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutomotiveComponent,
-    FinanceComponent,
-    TechnologyComponent
+    DashboardComponent,
+    UseCasesComponent,
+    UseCasesDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,23 +31,18 @@ import { TechnologyComponent } from './components/technology/technology/technolo
     MdIconModule,
     MdTabsModule,
     MdListModule,
+    MdGridListModule,
     RouterModule.forRoot([
-      {
-        path: 'automotive',
-        component: AutomotiveComponent
-      },
-      {
-        path: 'finance',
-        component: FinanceComponent
-      },
-      {
-        path: 'tech',
-        component: TechnologyComponent
-      },
-      {
-        path: '',
-        redirectTo: '/automotive',
+      { path: '',
+        redirectTo: '/dashboard',
         pathMatch: 'full'
+      },
+      { path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: 'usecases/:industry',
+        component: UseCasesComponent
       }
     ])
   ],
