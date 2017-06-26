@@ -1,6 +1,12 @@
-<p>
-  use-cases works!
-</p>
-<p>
-  {{industryName}}
-</p>
+<md-card class="example-card align-center" *ngFor="let useCase of useCases">
+    <md-card-header>
+        <md-card-title>Industry name: {{industryName}}</md-card-title>
+        <md-card-subtitle>Organization: {{useCase.organization}}</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+        <p>{{useCase.name}}</p>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button>DETAILS</button>
+    </md-card-actions>
+</md-card>

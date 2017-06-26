@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {
-  MdToolbarModule, MdListModule, MdGridListModule
+  MdToolbarModule, MdListModule, MdGridListModule, MdCardModule, MdButtonModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -32,6 +32,8 @@ import {HttpModule, JsonpModule} from "@angular/http";
     MdToolbarModule,
     MdListModule,
     MdGridListModule,
+    MdCardModule,
+      MdButtonModule,
     RouterModule.forRoot([
       { path: '',
         redirectTo: '/dashboard',
