@@ -4,14 +4,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {
-  MdButtonModule, MdTabsModule, MdMenuModule, MdToolbarModule, MdSidenavModule,
-  MdIconModule, MdListModule, MdGridListModule
+  MdToolbarModule, MdListModule, MdGridListModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UseCasesComponent } from './components/use-cases/use-cases.component';
 import { UseCasesDetailsComponent } from './components/use-cases-details/use-cases-details.component';
+import { IndustryService } from './services/industry/industry.service'
+
+
+import {HttpModule, JsonpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -24,12 +27,9 @@ import { UseCasesDetailsComponent } from './components/use-cases-details/use-cas
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MdSidenavModule,
+    HttpModule,
+    JsonpModule,
     MdToolbarModule,
-    MdMenuModule,
-    MdButtonModule,
-    MdIconModule,
-    MdTabsModule,
     MdListModule,
     MdGridListModule,
     RouterModule.forRoot([
@@ -46,7 +46,7 @@ import { UseCasesDetailsComponent } from './components/use-cases-details/use-cas
       }
     ])
   ],
-  providers: [],
+  providers: [IndustryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

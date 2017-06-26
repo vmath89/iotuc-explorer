@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-use-cases',
@@ -8,10 +10,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UseCasesComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+    industryName: String;
+
+  constructor(
+      private route: ActivatedRoute,
+      private router: Router
+  ) {}
 
   ngOnInit() {
-    this
+    this.industryName = this.route.snapshot.params['industry'];
+    console.log(this.industryName);
+
   }
 
 }
