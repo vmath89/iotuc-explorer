@@ -3,18 +3,18 @@
 </h3>
 <md-grid-list cols="4" rowHeight="100px" class="tile" gutterSize="2em">
 
-        <md-grid-tile
+    <md-grid-tile
 
-                (click)="onIndustryClick(tile.text)"
-                *ngFor="let tile of tiles"
-                [colspan]="tile.cols"
-                [rowspan]="tile.rows"
-                [style.background]="tile.color">
-            <a [routerLink]="['/usecases', tile.text]">{{tile.text}}</a>
+            (click)="onIndustryClick(tile.text)"
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color">
+        <a [routerLink]="['/usecases', tile.text]">{{tile.text}}</a>
 
 
-            <md-grid-tile-header>{{tile.header}}</md-grid-tile-header>
-            <md-grid-tile-footer>{{tile.footer}}</md-grid-tile-footer>
-        </md-grid-tile>
+        <md-grid-tile-header>{{tile.header}}</md-grid-tile-header>
+        <md-grid-tile-footer>{{tile.footer}}</md-grid-tile-footer>
+    </md-grid-tile>
 
 </md-grid-list>
