@@ -1,3 +1,14 @@
-<p>
-  use-cases-details works!
-</p>
+<md-card class="example-card align-center">
+    <md-card-header>
+        <md-card-title>Organization: {{useCase.organization}}</md-card-title>
+        <md-card-subtitle>Website: {{useCase.website}}</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+        <p>{{useCase.name}}</p>
+        <p>{{useCase.description}}</p>
+        <p>Tweet: {{useCase.tweet}}</p>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="goBack()">Back</button>
+    </md-card-actions>
+</md-card>

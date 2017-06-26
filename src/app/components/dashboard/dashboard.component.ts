@@ -6,7 +6,7 @@ import { IndustryService } from '../../services/industry/industry.service'
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-    providers: [IndustryService]
+  providers: [IndustryService]
 })
 export class DashboardComponent implements OnInit {
 
@@ -17,10 +17,9 @@ export class DashboardComponent implements OnInit {
   constructor(
       private router: Router,
       private industryService: IndustryService
-  ) { }
+  ) {}
 
   public fillTiles(): void {
-      console.log(this.industryObj);
 
       this.tiles = [
           {},
@@ -52,7 +51,6 @@ export class DashboardComponent implements OnInit {
 
   onIndustryClick(industry: String): void {
     this.selectedIndustry = industry;
-    console.log(industry);
     this.router.navigate(['/usecases', this.selectedIndustry]);
   }
 }

@@ -1,6 +1,9 @@
-.example-card {
+.align-center {
+    margin: 0 auto;
     width: 400px;
 }
-.align-center{
-    margin:0 auto;
+
+.text-center {
+    text-align: center;
 }
+

@@ -45,6 +45,10 @@ import {HttpModule, JsonpModule} from "@angular/http";
       {
         path: 'usecases/:industry',
         component: UseCasesComponent
+      },
+      {
+        path: 'details/:id',
+        component: UseCasesDetailsComponent
       }
     ])
   ],
