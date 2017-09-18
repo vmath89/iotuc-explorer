@@ -1,16 +1,16 @@
 <h3>
     Industry Dashboard
 </h3>
-<md-grid-list cols="4" rowHeight="100px" class="tile" gutterSize="2em">
+<md-grid-list cols="3" rowHeight="100px" class="tile" gutterSize="2em">
 
     <md-grid-tile
 
-            (click)="onIndustryClick(tile.text)"
+            (click)="onIndustryClick(tile.id )"
             *ngFor="let tile of tiles"
             [colspan]="tile.cols"
             [rowspan]="tile.rows"
             [style.background]="tile.color">
-        <a [routerLink]="['/usecases', tile.text]">{{tile.text}}</a>
+        <a [routerLink]="['/usecases', tile.id]">{{tile.text}}</a>
 
 
         <md-grid-tile-header>{{tile.header}}</md-grid-tile-header>

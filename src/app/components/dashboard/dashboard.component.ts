@@ -10,7 +10,7 @@ import { IndustryService } from '../../services/industry/industry.service'
 })
 export class DashboardComponent implements OnInit {
 
-    public selectedIndustry: any;
+    public selectedIndustryId: Number;
     public industryObj: any;
     public tiles: any;
 
@@ -27,12 +27,16 @@ export class DashboardComponent implements OnInit {
           {},
           {},
           {},
+          {},
+          {},
+          {},
+          {},
+          {}
       ];
 
       for(var i = 0; i < this.industryObj.length; i++){
           this.tiles[i].text = this.industryObj[i].name;
-          this.tiles[i].header = this.industryObj[i].description;
-          this.tiles[i].footer = this.industryObj[i].description;
+          this.tiles[i].id = this.industryObj[i].id;
           this.tiles[i].cols = 1;
           this.tiles[i].rows = 2;
           this.tiles[i].color = 'lightblue';
@@ -49,8 +53,8 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  onIndustryClick(industry: String): void {
-    this.selectedIndustry = industry;
-    this.router.navigate(['/usecases', this.selectedIndustry]);
+  onIndustryClick(id: Number): void {
+    this.selectedIndustryId = id;
+    this.router.navigate(['/usecases', this.selectedIndustryId]);
   }
 }

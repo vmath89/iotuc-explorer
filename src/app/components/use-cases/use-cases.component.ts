@@ -12,7 +12,7 @@ import 'rxjs/add/operator/switchMap';
 })
 export class UseCasesComponent implements OnInit {
 
-    industryName: string;
+    industryId: Number;
     useCases: any;
     public selectedUseCase: any;
 
@@ -22,8 +22,9 @@ export class UseCasesComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.industryName = this.route.snapshot.params['industry'];
-        this.useCasesService.getUseCases(this.industryName).subscribe(res => {
+        this.industryId = this.route.snapshot.params['industry'];
+        console.log(this.industryId)
+        this.useCasesService.getUseCases(this.industryId).subscribe(res => {
             this.useCases = res.json()
         });
     }

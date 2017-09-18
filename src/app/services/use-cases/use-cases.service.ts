@@ -9,8 +9,9 @@ export class UseCasesService {
     constructor(private http: Http) {
     }
 
-    public getUseCases(industry: string): any {
+    public getUseCases(industry: Number): any {
         let url: string = "http://localhost:8080/iot/usecases?industry=" + industry;
+        console.log(url)
         return (this.http.get(url));
     }
 
