@@ -21,20 +21,10 @@ export class DashboardComponent implements OnInit {
 
   public fillTiles(): void {
 
-      this.tiles = [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-      ];
+      this.tiles = new Array();
 
       for(var i = 0; i < this.industryObj.length; i++){
+          this.tiles.push({})
           this.tiles[i].text = this.industryObj[i].name;
           this.tiles[i].id = this.industryObj[i].id;
           this.tiles[i].cols = 1;
