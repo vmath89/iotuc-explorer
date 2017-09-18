@@ -1,7 +1,8 @@
-<!--The whole content below can be removed with the new code.-->
-
 <md-toolbar color="primary" layout="row" layout-align="center center" class="in-center">
-  <span>{{title}}</span>
+    <div>
+        <span>
+            <a class="title" [routerLink]="['/dashboard']">{{title}}</a>
+        </span>
+    </div>
 </md-toolbar>
-
 <router-outlet></router-outlet>
