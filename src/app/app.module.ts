@@ -15,13 +15,15 @@ import { IndustryService } from './services/industry/industry.service'
 
 
 import {HttpModule, JsonpModule} from "@angular/http";
+import { SortPipe } from './pipes/sort/sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     UseCasesComponent,
-    UseCasesDetailsComponent
+    UseCasesDetailsComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

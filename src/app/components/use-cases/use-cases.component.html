@@ -2,12 +2,11 @@
     <h2>Use Cases for {{useCases[0].industry.name}}</h2>
 </div>
 
-<md-card class="example-card align-center" *ngFor="let useCase of useCases">
-    <md-card-header>
-        <md-card-title>Screen Name: {{useCase.screenName}}</md-card-title>
-    </md-card-header>
+<md-card class="example-card align-center" *ngFor="let useCase of useCases | sort: '-createdAt'">
     <md-card-content>
         <p>{{useCase.tweet}}</p>
+        <p>Tweeted By: {{useCase.screenName}}</p>
+        <p>Date: {{useCase.createdAt}}</p>
     </md-card-content>
     <md-card-actions>
         <button md-button (click)="details(useCase)">DETAILS</button>
