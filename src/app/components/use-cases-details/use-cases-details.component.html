@@ -10,7 +10,7 @@
     <md-card-content>
         <p>Tweet: {{useCase.tweet}}</p>
         <p>Tweeted By: {{useCase.screenName}}</p>
-        <p>Date: {{useCase.createdAt}}</p>
+        <p>Date: {{useCase.createdAt | date}}</p>
         <p>Website: {{useCase.website}}</p>
         <a href="https://twitter.com/ITAbuzz/status/{{useCase.tweetId}}">Tweet Link</a>
     </md-card-content>

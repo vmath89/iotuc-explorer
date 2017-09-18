@@ -6,7 +6,7 @@
     <md-card-content>
         <p>{{useCase.tweet}}</p>
         <p>Tweeted By: {{useCase.screenName}}</p>
-        <p>Date: {{useCase.createdAt}}</p>
+        <p>Date: {{useCase.createdAt | date }}</p>
     </md-card-content>
     <md-card-actions>
         <button md-button (click)="details(useCase)">DETAILS</button>
