@@ -23,7 +23,6 @@ export class UseCasesComponent implements OnInit {
 
     ngOnInit() {
         this.industryId = this.route.snapshot.params['industry'];
-        console.log(this.industryId)
         this.useCasesService.getUseCases(this.industryId).subscribe(res => {
             this.useCases = res.json()
         });
@@ -31,9 +30,9 @@ export class UseCasesComponent implements OnInit {
 
     details(useCase: any): void {
         this.selectedUseCase = useCase;
-        console.log(this.selectedUseCase);
         this.router.navigate(['/details', this.selectedUseCase.id]);
     }
+
     goBack(){
         window.history.back();
     }

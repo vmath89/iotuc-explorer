@@ -1,8 +1,11 @@
 <div class="text-center">
-    <h2>Use Cases for {{useCases[0].industry.name}}</h2>
+    <div *ngIf="useCases && useCases.length > 0">
+        <h2>Use Cases for {{useCases[0].industry.name}}</h2>
+    </div>
 </div>
 
-<md-card class="example-card align-center" *ngFor="let useCase of useCases | sort: '-createdAt'">
+<!--   | sort: '-createdAt'    -->
+<md-card class="example-card align-center" *ngFor="let useCase of useCases">
     <md-card-content>
         <p>{{useCase.tweet}}</p>
         <p>Tweeted By: {{useCase.screenName}}</p>
