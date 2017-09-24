@@ -31,8 +31,8 @@ export class UseCasesComponent implements OnInit {
     details(useCase: any): void {
         this.selectedUseCase = useCase;
         this.router.navigate(['/details', this.selectedUseCase.id]);
-        console.log(this.useCases[0])
     }
+
     goBack(){
         window.history.back();
     }
