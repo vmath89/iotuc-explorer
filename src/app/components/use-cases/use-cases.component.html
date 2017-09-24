@@ -10,6 +10,7 @@
         <p>{{useCase.tweet}}</p>
         <p>Tweeted By: {{useCase.screenName}}</p>
         <p>Date: {{useCase.createdAt | date }}</p>
+        <ng2-tweet tweetId="{{useCase.tweetId}}"></ng2-tweet>
     </md-card-content>
     <md-card-actions>
         <button md-button (click)="details(useCase)">DETAILS</button>

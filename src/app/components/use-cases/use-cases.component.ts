@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {UseCasesService} from '../../services/use-cases/use-cases.service'
+import { Ng2TweetService } from 'ng2-tweet/lib/index';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -18,7 +19,9 @@ export class UseCasesComponent implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
-                private useCasesService: UseCasesService) {
+                private useCasesService: UseCasesService,
+                private ng2TweetService: Ng2TweetService
+    ) {
     }
 
     ngOnInit() {

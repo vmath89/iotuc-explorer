@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IndustryService } from '../../services/industry/industry.service'
-import { Ng2TweetService } from 'ng2-tweet/lib/index';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,8 +16,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(
       private router: Router,
-      private industryService: IndustryService,
-    private ng2TweetService: Ng2TweetService
+      private industryService: IndustryService
 ) {}
 
   public fillTiles(): void {
