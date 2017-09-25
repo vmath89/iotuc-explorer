@@ -7,6 +7,8 @@ import {
   MdToolbarModule, MdListModule, MdGridListModule, MdCardModule, MdButtonModule
 } from '@angular/material';
 
+import {Ng2OrderModule} from "ng2-order-pipe";
+
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UseCasesComponent } from './components/use-cases/use-cases.component';
@@ -33,6 +35,7 @@ import { Ng2TweetModule } from 'ng2-tweet/lib/index';
     HttpModule,
     JsonpModule,
     Ng2TweetModule,
+    Ng2OrderModule,
     MdToolbarModule,
     MdListModule,
     MdGridListModule,

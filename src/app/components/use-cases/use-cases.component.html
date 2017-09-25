@@ -5,11 +5,10 @@
 </div>
 
 <!--   | sort: '-createdAt'    -->
-<md-card class="example-card align-center" *ngFor="let useCase of useCases">
+<md-card class="example-card align-center" *ngFor="let useCase of useCases | orderBy: 'probability' : 'reverse'">
     <md-card-content>
         <p>{{useCase.tweet}}</p>
-        <p>Tweeted By: {{useCase.screenName}}</p>
-        <p>Date: {{useCase.createdAt | date }}</p>
+        <p>Probability: {{useCase.probability | percent}}</p>
         <ng2-tweet tweetId="{{useCase.tweetId}}"></ng2-tweet>
     </md-card-content>
     <md-card-actions>
