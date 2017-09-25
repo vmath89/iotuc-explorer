@@ -1,5 +1,5 @@
 <div class="text-center">
-    <h2>Use Cases for {{useCase.industry.name}}</h2>
+    <h2>Use Cases for {{useCase?.industry.name}}</h2>
 </div>
 
 <md-card class="example-card align-center">
@@ -8,11 +8,11 @@
         <md-card-subtitle></md-card-subtitle>
     </md-card-header>
     <md-card-content>
-        <p>Tweet: {{useCase.tweet}}</p>
-        <p>Tweeted By: {{useCase.screenName}}</p>
-        <p>Date: {{useCase.createdAt | date}}</p>
-        <p>Website: {{useCase.website}}</p>
-        <a href="https://twitter.com/ITAbuzz/status/{{useCase.tweetId}}">Tweet Link</a>
+        <p>Tweet: {{useCase?.tweet}}</p>
+        <p>Tweeted By: {{useCase?.screenName}}</p>
+        <p>Date: {{useCase?.createdAt | date}}</p>
+        <p>Website: {{useCase?.website}}</p>
+        <a href="https://twitter.com/ITAbuzz/status/{{useCase?.tweetId}}">Tweet Link</a>
     </md-card-content>
     <md-card-actions>
         <button md-button (click)="goBack()">Back</button>
