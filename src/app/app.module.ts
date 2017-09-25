@@ -17,7 +17,6 @@ import { IndustryService } from './services/industry/industry.service'
 
 
 import {HttpModule, JsonpModule} from "@angular/http";
-import { SortPipe } from './pipes/sort/sort.pipe';
 import { Ng2TweetModule } from 'ng2-tweet/lib/index';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { Ng2TweetModule } from 'ng2-tweet/lib/index';
     DashboardComponent,
     UseCasesComponent,
     UseCasesDetailsComponent,
-    SortPipe
   ],
   imports: [
     BrowserModule,
