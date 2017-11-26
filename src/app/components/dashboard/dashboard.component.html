@@ -11,10 +11,9 @@
             [colspan]="tile.cols"
             [rowspan]="tile.rows"
             [style.background]="tile.color">
-        <a [routerLink]="['/usecases', tile.id]">{{tile.text}}</a>
+        <a class="big-font" [routerLink]="['/usecases', tile.id]">{{tile.text}}</a>
 
 
-        <md-grid-tile-header>{{tile.header}}</md-grid-tile-header>
     </md-grid-tile>
 
 </md-grid-list>

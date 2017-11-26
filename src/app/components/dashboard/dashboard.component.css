@@ -1,3 +1,9 @@
-.tile {
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
+.big-font {
+    color: #673ab7;
+    font-size: 1.5em;
 }

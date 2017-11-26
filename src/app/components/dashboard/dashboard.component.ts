@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
     public selectedIndustryId: Number;
     public industryObj: any;
     public tiles: any;
+    public text: any
 
   constructor(
       private router: Router,
@@ -30,6 +31,16 @@ export class DashboardComponent implements OnInit {
           this.tiles[i].cols = 1;
           this.tiles[i].rows = 2;
           this.tiles[i].color = 'lightblue';
+          this.tiles[i].words = this.tiles[i].text.split(" ");
+          //console.log(this.tiles[i].words);
+          //this.tiles[i].text = this.tiles[i].words
+          // console.log(this.tiles[i].words.length);
+          // this.text = '';
+          //  for(var j = 0; j < this.tiles[i].words.length; j++){
+          //      this.text += this.tiles[i].words[j];
+          //      console.log(this.tiles[i].words[j].word)
+          //  }
+          // this.tiles[i].text = this.text;
 
       }
   }
