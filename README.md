@@ -2,9 +2,9 @@
 Identification of IoT use cases in massive Twitter datasets using text mining
 
 ## Requirements
-Install Angular CLI
-Install NPM
-Install ng2tweet 
+- Install Angular CLI
+- Install NPM
+- Install ng2tweet 
 ```
 npm install angular-cli
 npm install npm@latest -g
